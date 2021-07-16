@@ -57,7 +57,62 @@ All Scala methods and constructors support keyword parameters and default parame
 When we call a method or constructor, we can use parameter names as keywords to specify the parameters in
 an arbitrary order:
 
-This comes in doubly useful when used in combintion with default parameter values, defined like this:
+This comes in doubly useful when used in combina􏰀on with default parameter values, defined like this:
  `new Person(lastName = "Last", firstName = "First")` 
  `// res: Person = Person(First,Last)`
+ 
+# The apply method
+
+For now we are going to look at just one of Scala’s features supporting functional programming—function application syntax.
+In Scala, by convention, an object can be “called” like a function if it has a method called apply. Naming a method apply affords us a special shortened call syntax: foo.apply(args) becomes foo(args).
+For example, let’s rename the add method in Adder to apply: 
+
+```
+class Adder(amount: Int) {
+def apply(in: Int): Int = in + amount
+}
+val add3 = new Adder(3)
+// add3: Adder = Adder@1d4f0fb4
+add3(2) // shorthand for add3.apply(2) // res: Int = 5
+
+```
+# Object 
+
+An object is a class that has exactly one instance.
+Most often, you need an object to hold methods and values/variables that shall be available without having to first instantiate an instance of some class.
+As a top-level value, an object is a singleton.
+
+# Defining a singleton object
+
+An object is a value. The definition of an object looks like a class, but uses the keyword object:
+`object Person`
+
+Here’s an example of an object with a method:
+
+```
+package logging
+
+object Logger {
+  def info(message: String): Unit = println(s"INFO: $message")
+}
+```
+
+The method info can be imported from anywhere in the program. Creating utility methods like this is a common use case for singleton objects.
+
+# Companion Objects
+
+Sometimes we want to create a method that logically belongs to a class but is independent of any particular object. In Java we would use a static method for this, but Scala has a simpler solution that we’ve seen already: singleton objects.
+One common use case is auxiliary constructors. Although Scala does have syntax that lets us define mul􏰀ple constructors for a class, Scala programmers almost always prefer to implement additional constructors as apply methods on an object with the same name as the class. 
+We refer to the object as the companion object of the class. For example:
+
+```
+class Timestamp(val seconds: Long)
+object Timestamp {
+def apply(hours: Int, minutes: Int, seconds: Int): Timestamp =
+    new Timestamp(hours*60*60 + minutes*60 + seconds)
+}
+Timestamp(1, 1, 1).seconds
+// res: Long = 3661
+```
+
  
