@@ -57,7 +57,7 @@ All Scala methods and constructors support keyword parameters and default parame
 When we call a method or constructor, we can use parameter names as keywords to specify the parameters in
 an arbitrary order:
 
-This comes in doubly useful when used in combina􏰀on with default parameter values, defined like this:
+This comes in doubly useful when used in combintion with default parameter values, defined like this:
  `new Person(lastName = "Last", firstName = "First")` 
  `// res: Person = Person(First,Last)`
  
@@ -102,7 +102,7 @@ The method info can be imported from anywhere in the program. Creating utility m
 # Companion Objects
 
 Sometimes we want to create a method that logically belongs to a class but is independent of any particular object. In Java we would use a static method for this, but Scala has a simpler solution that we’ve seen already: singleton objects.
-One common use case is auxiliary constructors. Although Scala does have syntax that lets us define mul􏰀ple constructors for a class, Scala programmers almost always prefer to implement additional constructors as apply methods on an object with the same name as the class. 
+One common use case is auxiliary constructors. Although Scala does have syntax that lets us define mutiple constructors for a class, Scala programmers almost always prefer to implement additional constructors as apply methods on an object with the same name as the class. 
 We refer to the object as the companion object of the class. For example:
 
 ```
