@@ -94,8 +94,8 @@ abstract class Animal {
 }
 ```
 ## Case Class 
- Case classes are an excep􏰀onally useful shorthand for defining a class, a companion object, and a lot of sensible defaults in one go. They are ideal for crea􏰀ng lightweight data-holding classes with the minimum of hassle.
-Case classes are created simply by prepending a class defini􏰀on with the keyword case:
+ Case classes are an excetionally useful shorthand for defining a class, a companion object, and a lot of sensible defaults in one go. They are ideal for creating lightweight data-holding classes with the minimum of hassle.
+Case classes are created simply by prepending a class defintion with the keyword case:
 
 ```
 case class Person(firstName: String, lastName: String){
@@ -135,7 +135,7 @@ objects on the basis of their contents rather than their reference identity:
 Note:  that the copy method creates and returns a new object of the class rather than returning the current one:
 ### Features of a case class companion object
 
-The companion object contains an apply method with the same arguments as the class constructor. Scala programmers tend to prefer the apply method over the constructor for the brevity of omi􏰄ng new, which makes constructors much easier to read inside expressions:
+The companion object contains an apply method with the same arguments as the class constructor. Scala programmers tend to prefer the apply method over the constructor for the brevity of omiting new, which makes constructors much easier to read inside expressions:
 ```
 Person("Amit", "Prasad") == Person("Jay", "Kumar") // res: Boolean = false
 Person("Amit", "Prasad") == Person("Amit", "Prasad") // res: Boolean = true
