@@ -76,6 +76,24 @@ val add3 = new Adder(3)
 add3(2) // shorthand for add3.apply(2) // res: Int = 5
 
 ```
+
+# Abstract Class 
+Abstract classes are more indicated for refining what an object is. For instance, we can have an abstract class Animal and now say that Cow is a subclass of Animal. One important limitation is that classes can only inherit from a single abstract class at most.
+
+Abstract classes are defined with the abstract modifier preceding the class keyword. Moreover, abstract classes can contain fully defined methods and abstract methods as well:
+```
+abstract class Animal {
+
+  def heartBeat(): Int = {
+    42
+  }
+
+  // this is an abstract method that should 
+  // be overridden by subclasses
+  def eat(): String // returns the sound made while eating
+}
+```
+
 # Object 
 
 An object is a class that has exactly one instance.
