@@ -1,4 +1,4 @@
-# # Try 
+# Try 
 
 The `Try` represents error handling semantics which could be either  `Success` when no exception caught or `Failure` when caught any.
  It's similar to, but semantically different from the scala.util.Either type.
