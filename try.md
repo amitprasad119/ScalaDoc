@@ -3,8 +3,8 @@
 The `Try` represents error handling semantics which could be either  `Success` when no exception caught or `Failure` when caught any.
  It's similar to, but semantically different from the scala.util.Either type.
  There are two instance of `Try[T]` 
-   -  Success   
-   - Failure
+   - scala.util.Success   
+   - scala.util.Failure
    
 Let's see this by an example: 
 
