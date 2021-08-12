@@ -1,4 +1,6 @@
-# Higher order function (HOFs)
+# Higher order function (HOFs) and Currying
+
+### Higher order functions
 A function is Higher Order Function if it contains other functions as a parameter or returns a function as an output i.e, the functions that operate with another functions are known as Higher order Functions.
 The key benefits of this feature are : 
 
@@ -21,10 +23,31 @@ Now let's pass greet  function as an argument to message function
 ```
 def message(greet: String => String , name:String) = println(greet(name))
 ```
-When we call the message function 
+When we call the message function
 
 `message(greet,"Amit")`
 
 **Hello Amit!** would be printed.
+
+### Currying 
+A curried function is applied to multiple argument lists, instead of just one. 
+Function currying is an interesting concept in Scala. We often associate it with the partially applied functions. Let's try to understand the basics with an example:
+
+```
+def plainOldSum(x: Int, y: Int) = x + y
+plainOldSum: (x: Int,y: Int)Int
+scala> plainOldSum(1, 2)
+res4: Int = 3
+```
+
+By contrast, in below example shows a similar function that’s curried. Instead of one list of two Int parameters, you apply this function to two lists of one Int parameter each.
+```
+scala> def curriedSum(x: Int)(y: Int) = x + y
+curriedSum: (x: Int)(y: Int)Int
+scala> curriedSum(1)(2)
+res5: Int = 3
+```
+
+What’s happening here is that when you invoke curriedSum, you actu- ally get two traditional function invocations back to back. The first function invocation takes a single Int parameter named x, and returns a function value for the second function. This second function takes the Int parameter y.
 
 
