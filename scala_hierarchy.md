@@ -42,3 +42,9 @@ val baz = if(false) "it worked" else null // baz: String = null
 
 Although the types of badness and res are `Nothing` and `Null` respectively, the types of bar and baz are still sensible. This is because Int is the least common supertype of Int and Nothing, and String is the least common supertype of `String` and `Null`.
 
+**Exercises:**
+
+- Create a list of type `AnyVal`
+- Create a variable of type `Unit`  
+
+
