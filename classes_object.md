@@ -196,4 +196,9 @@ Timestamp(1, 1, 1).seconds
 // res: Long = 3661
 ```
 
+**Exercises:**
+- Create a class to calculate the simple intrest using a method call *calculateSimpleIntrest* having two parameters **principle** , **rate** for one year. 
+- Create a class where constructors takes a parameter as number and calculate the cube in **calculateCube** 
+- Create a case class and override **apply** method to print a custom message 
+- Create a single object with HelloWorld 
  
