@@ -17,16 +17,13 @@ Here `_` is treated as wild card where if nothing is matched this block will be 
 **Example:** 
 
 ```
-import scala.util.Random
-
-val x: Int = Random.nextInt(10)
-
-x match {
-  case 0 => "zero"
+def matchTest(x: Int): String = x match {
   case 1 => "one"
   case 2 => "two"
   case _ => "other"
 }
+matchTest(3)  // prints other
+matchTest(1)  // prints one
 ```
 The val x above is a random integer between 0 and 10. x becomes the left operand of the match operator and on the right is an expression with four cases.Cases are also called alternatives.
 
