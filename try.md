@@ -30,3 +30,7 @@ def divide: Try[Int] = {
     
 }
 ```
+**Exercises:** 
+
+- Create a `Try` block and make an exception handling for devide by zero and print both success and failure cases by passing two diffrent arguments one by one. 
+- Write the code to validate the age for a person and make the validation if he/she is eligible to vote or not (eligible age is 18 years). 
