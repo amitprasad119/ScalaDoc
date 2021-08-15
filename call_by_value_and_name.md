@@ -64,3 +64,9 @@ x2=1
 
 ```
 So you can see that in the `call-by-value` version, the side-effect of the passed-in function call `(mockMethod())` only happened once. However, in the call-by-name version, the side-effect happened twice.
+
+**Exercises:**
+- Create a class to calculate the simple intrest using a method call *calculateSimpleIntrest* having two parameters **principle** , **rate** for one year. 
+- Create a class where constructors takes a parameter as number and calculate the cube in **calculateCube** 
+- Create a case class and override **apply** method to print a custom message 
+- Create a single object with HelloWorld 
