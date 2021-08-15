@@ -64,3 +64,7 @@ x2=1
 
 ```
 So you can see that in the `call-by-value` version, the side-effect of the passed-in function call `(mockMethod())` only happened once. However, in the call-by-name version, the side-effect happened twice.
+
+**Exercises:**
+- Create a method which takes argument as call by name and print the currentMilliseconds 
+- Create a method to print the greeting message (argument should be call by value)
