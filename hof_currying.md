@@ -50,4 +50,8 @@ res5: Int = 3
 
 What’s happening here is that when you invoke curriedSum, you actu- ally get two traditional function invocations back to back. The first function invocation takes a single Int parameter named x, and returns a function value for the second function. This second function takes the Int parameter y.
 
-
+**Exercises:**
+- Create two methods to calculate Square,Cube then pass these methods to a `sum` function and add both passed function as result 
+   i.e `def sum(function1,function2,num) = {}` 
+- Calculate the principle intrest in curried function by passing principle amount,rate and years as individual argument. 
+  
