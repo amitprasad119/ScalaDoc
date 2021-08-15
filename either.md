@@ -33,4 +33,8 @@ object EitherLeftRightExample extends App {
 ```
 We can run the pattern match also as  can be seen in above example.
 
+**Exercises:**
+
+- Create a function which can either divide a number or send an exception message, return type of a fucntion should be  `Either[String,Int]`
+- Create a function which can send the message `Not allowed for driving` or nothing if `Allowed`, i.e  `def isAllowedToVote(age:Int):Either[String,Unit]` 
 
