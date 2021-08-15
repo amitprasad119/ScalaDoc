@@ -52,3 +52,9 @@ toInt("1").foreach{ i =>
     println(s"Got an int: $i")
 }
 ```
+
+**Exercises:**
+
+- Create a function which can greet a person with name if present or just print unknown user.
+- Create a function which can either return `Some(T)` or `None` , print the value or assign some default if value is not present (Hint: Use `getOrElse`)
+
