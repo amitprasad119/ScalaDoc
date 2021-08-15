@@ -44,3 +44,8 @@ tailrecSum(0, 15)
 
 In the tail-recursive case, with each evaluation of the recursive call, the runningTotal is updated.
 
+**Exercises:** 
+
+- Create a tail recursion to calculate the factorial of a number. 
+- Create a tail recursion to print the fibonacci series.  
+
